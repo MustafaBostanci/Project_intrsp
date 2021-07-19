@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="hakkimda content">
+        <h2><%=hakkimda %></h2>
+        <div class="ders-ekle content">
+            <form method="POST" action="/dersler">
+                <label for="baslik">Student Name:</label>
+                <input type="text" id="baslik" name="baslik" required/>
+                <br>
+                <br>
+                <label for="icerik">Age:</label>
+                <input type="text" id="icerik" name="icerik" required/>
+                <br>
+                <br>
+                
+                
+
+                <button>Save</button>
+            </form>
+    
+        </div>
+
+    </div>
+</body>
+</html>

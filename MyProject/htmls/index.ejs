@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    
+    <div class="dersler content">
+        <h2>Click on the options below to view the details.</h2>
+        <% if(dersler.length >0){ %>
+            <% dersler.forEach(ders=>{ %>
+                <a class="tekil" href="/dersler/<%=ders._id%>">
+                    <h3 class="baslik"><%= ders.baslik%></h3>
+                
+                <p class="icerik"><%= ders.icerik%></p>
+            </a> 
+                <% }) %>
+                <% }else {%>
+                    <p>Nothing has been added yet</p>
+                    <% } %>
+
+    </div>
+</body>
+</html>
